@@ -181,15 +181,16 @@ body.menu-open .nav__drawer{transform:translateX(0)}
 .marquee__sep{color:var(--wine-soft);font-size:.7rem;font-style:normal}
 @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
-/* ============================================================ SITUAÇÕES (editorial em linhas) */
-.quem__head{max-width:22ch;margin-bottom:20px}
-.quem__list{border-top:1px solid var(--line)}
-.quem-row{display:grid;grid-template-columns:minmax(80px,1fr) 5fr 4fr;gap:clamp(20px,4vw,60px);align-items:center;padding:clamp(28px,4vw,48px) 0;border-bottom:1px solid var(--line);transition:background .35s var(--ease)}
-.quem-row:hover{background:var(--paper-2)}
-.quem-num{font-family:var(--font-head);font-style:italic;font-size:clamp(2.4rem,5vw,4rem);color:var(--wine);line-height:1}
-.quem-row h3{font-size:clamp(1.3rem,2.4vw,1.9rem);letter-spacing:-.02em}
-.quem-row p{font-size:.98rem;color:var(--graphite);margin:0}
-.quem-row .link-arrow{margin-top:16px}
+/* ============================================================ SITUAÇÕES (cards) */
+.quem__head{max-width:38ch;margin-bottom:52px}
+.quem__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.quem-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:34px 30px;display:flex;flex-direction:column;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.quem-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md)}
+.quem-card__top{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
+.quem-num{font-family:var(--font-head);font-style:italic;font-size:2.4rem;color:var(--wine);line-height:1}
+.quem-sit{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;font-family:var(--font-ui)}
+.quem-card h3{font-size:1.28rem;margin-bottom:12px}
+.quem-card p{font-size:.96rem;color:var(--graphite);margin:0 0 24px;flex-grow:1}
 
 /* ============================================================ SOBRE + STORY (imagem à esquerda, deslocado) */
 .about__grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(36px,6vw,90px);align-items:center}
@@ -515,8 +516,8 @@ body.menu-open .nav__drawer{transform:translateX(0)}
 @media (max-width:1024px){
   .hero__grid{grid-template-columns:1fr}
   .hero__visual{max-width:460px}
-  .quem-row{grid-template-columns:minmax(60px,1fr) 6fr}
-  .quem-row .quem-cta{grid-column:2}
+  .quem__grid{grid-template-columns:1fr 1fr}
+  .quem-card:nth-child(3){grid-column:span 2}
   .jornada__grid{grid-template-columns:1fr 1fr;border-top:none}
   .jor-card{border-top:1px solid rgba(255,255,255,.1)}
   .exams__grid,.price-grid,.testi__grid{grid-template-columns:1fr 1fr}
@@ -535,7 +536,8 @@ body.menu-open .nav__drawer{transform:translateX(0)}
   .exams__grid,.price-grid,.testi__grid{grid-template-columns:1fr}
   .exam-card:nth-child(3){grid-column:span 1}
   .jornada__grid{grid-template-columns:1fr}
-  .quem-row{grid-template-columns:1fr;gap:10px}
+  .quem__grid{grid-template-columns:1fr}
+  .quem-card:nth-child(3){grid-column:span 1}
   .protocolo__list{grid-template-columns:1fr}
   .intent-card{grid-template-columns:1fr}
   .intent-card__media img{min-height:200px}
