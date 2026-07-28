@@ -19,12 +19,23 @@ entrada e distribui para os sub-projetos ("sites dentro do site").
 - `css/styles.css` — design system completo (paleta bordô #8A1027 / grafite #515151 / branco)
 - `js/main.js` — nav, scroll-reveal, contadores, FAQ, modais, quiz multi-etapas, exit-intent
 
-## Recursos de interação
-- Navbar fixa com dropdown "Programas" e menu mobile
-- Scroll reveal + contadores animados
-- Modal de agendamento (WhatsApp), quiz interativo com resultado, popup de captação (exit-intent)
-- Botão flutuante de WhatsApp
-- FAQ em acordeão
+## Recursos de interação (design system 2.0)
+- **Lenis** (smooth scroll) — carregado via CDN unpkg
+- **Grifo animado** — highlight bordô que se desenha no scroll nas palavras-chave
+- **Mega-menu** "Programas" (3 colunas) + dropdown + menu mobile
+- **Hero** com foto de fundo (duotone), palavra rotativa, anti-flash e cards de credencial
+- **Marquee** infinito de serviços
+- **Exames por intenção** — seção sticky scroll-driven (Ronco/Cansaço/CPAP/Performance) com carrossel
+- **Chat de objeções** — mensagens surgem com "digitando…" e fundo animado
+- **Depoimentos** em mural duplo (duas fileiras em direções opostas)
+- **Story slideshow** na seção Sobre (estilo Instagram)
+- **Diferenciais** em acordeão com imagem sticky
+- **Progressive blur** no topo/base da viewport
+- Scroll reveal + contadores, modais (agendamento/quiz/lead exit-intent), FAQ acordeão, WhatsApp flutuante
+
+## Tipografia & paleta
+- Fontes: **Host Grotesk** (display) · **DM Sans** (texto) · **Fraunces** (itálico serifado dos destaques)
+- Fundo off-white quente + bordô #8A1027 / grafite #515151
 
 ## ⚠️ Placeholders a substituir antes do go-live
 1. **Número de WhatsApp**: hoje está `5547999999999` em todos os links `wa.me`.
