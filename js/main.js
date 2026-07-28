@@ -20,42 +20,6 @@
     window.lenis = lenis;
   }
 
-  /* ---------- Brilhos reativos ao cursor ---------- */
-  const bgfx = $(".bg-fx");
-  if (bgfx && !reduce) {
-    const glow = $(".cursor-glow", bgfx);
-    const blobs = $$(".blob", bgfx).map((el, i) => ({
-      el,
-      x: 0, y: 0,                       // offset atual (suavizado)
-      amp: 26 + i * 16,                 // amplitude do movimento autônomo
-      sp: 0.00010 + i * 0.00004,        // velocidade
-      ph: i * 1.9,                      // fase
-      mf: 0.55 - i * 0.10               // fator de parallax com o mouse (profundidade)
-    }));
-    let mx = window.innerWidth / 2, my = window.innerHeight / 2;   // alvo (cursor)
-    let gx = mx, gy = my;                                          // glow suavizado
-    let live = false;
-    const onMove = (e) => {
-      mx = e.clientX; my = e.clientY;
-      if (!live) { live = true; bgfx.classList.add("is-live"); }
-    };
-    window.addEventListener("pointermove", onMove, { passive: true });
-    const loop = (t) => {
-      const nx = (mx / window.innerWidth - 0.5) * 2;   // -1..1
-      const ny = (my / window.innerHeight - 0.5) * 2;
-      blobs.forEach((b) => {
-        const tx = Math.sin(t * b.sp + b.ph) * b.amp + nx * 120 * b.mf;
-        const ty = Math.cos(t * b.sp * 1.1 + b.ph) * b.amp + ny * 120 * b.mf;
-        b.x += (tx - b.x) * 0.055; b.y += (ty - b.y) * 0.055;
-        const s = 1 + Math.sin(t * b.sp * 2 + b.ph) * 0.09;
-        b.el.style.transform = `translate(${b.x.toFixed(1)}px,${b.y.toFixed(1)}px) scale(${s.toFixed(3)})`;
-      });
-      if (glow) { gx += (mx - gx) * 0.14; gy += (my - gy) * 0.14; glow.style.transform = `translate(${gx.toFixed(1)}px,${gy.toFixed(1)}px)`; }
-      requestAnimationFrame(loop);
-    };
-    requestAnimationFrame(loop);
-  }
-
   /* ---------- Nav scroll state ---------- */
   const nav = $(".nav");
   const onScroll = () => { if (nav) nav.classList.toggle("is-scrolled", window.scrollY > 24); };

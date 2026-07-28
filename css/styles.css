@@ -9,7 +9,7 @@
   --wine:#8a1027; --wine-deep:#6c0c1f; --wine-dark:#4c0715; --wine-soft:#c2596b;
   --wine-tint:#f2dfe3; --wine-tint-2:#faf1f2; --wine-hi:rgba(138,16,39,.16);
   --graphite:#515151; --ink:#211a1c; --ink-2:#3c3335; --near-black:#171012; --near-black-2:#1e1417;
-  --white:#fff; --paper:#ffffff; --paper-2:#ffffff; --paper-3:#efe9e6; --line:#ece5e2; --line-soft:#f0eae7; --muted:#8f8587;
+  --white:#fff; --paper:#f7f3f0; --paper-2:#efe7e3; --paper-3:#e7dbd7; --line:#e4d8d4; --line-soft:#ece2de; --muted:#948a8c;
   --bg:var(--paper); --text:var(--graphite); --heading:var(--ink);
 
   --font-head:"Playfair Display", Georgia, "Times New Roman", serif;
@@ -105,7 +105,7 @@ h1,h2,h3,h4{font-family:var(--font-head);color:var(--heading);line-height:1.04;m
 
 /* ============================================================ NAV + MEGA */
 .nav{position:fixed;inset:0 0 auto 0;z-index:100;transition:background .4s var(--ease),box-shadow .4s var(--ease),padding .4s var(--ease);padding-block:18px}
-.nav.is-scrolled{background:rgba(255,255,255,.82);backdrop-filter:blur(16px);box-shadow:0 1px 0 rgba(0,0,0,.05);padding-block:11px}
+.nav.is-scrolled{background:rgba(247,243,240,.86);backdrop-filter:blur(16px);box-shadow:0 1px 0 rgba(0,0,0,.05);padding-block:11px}
 .nav__inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
 .brand{display:flex;align-items:center;gap:12px}
 .brand__mark{width:42px;height:42px;flex:none}
@@ -588,11 +588,3 @@ body{background:transparent}
 .hero__title{max-width:16ch}
 
 .about__text .section-title,.faq .section-title,.protocolo .section-title{max-width:none}
-
-/* ============================================================ BRILHOS REATIVOS AO CURSOR */
-/* fundo 100% branco; blobs movidos via JS (sobre branco = brilho colorido) */
-.bg-fx .blob{animation:none!important;opacity:.42;transition:opacity .4s}
-.cursor-glow{position:fixed;top:0;left:0;width:520px;height:520px;margin:-260px 0 0 -260px;border-radius:50%;pointer-events:none;z-index:-1;mix-blend-mode:multiply;background:radial-gradient(circle,rgba(138,16,39,.22),rgba(194,89,107,.10) 45%,transparent 70%);will-change:transform;opacity:0;transition:opacity .5s}
-.bg-fx.is-live .cursor-glow{opacity:1}
-@media (hover:none){.cursor-glow{display:none}}
-@media (prefers-reduced-motion:reduce){.cursor-glow{display:none}}
