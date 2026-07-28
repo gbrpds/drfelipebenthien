@@ -45,21 +45,33 @@
     revealEls.forEach((el) => el.classList.add("is-visible"));
   }
 
-  /* ---------- Grifo (highlight animado) ---------- */
+  /* ---------- Grifo glitch (destaque "bugado") ---------- */
   const grifos = $$("[data-grifo]");
-  if ("IntersectionObserver" in window && grifos.length) {
+  // popula data-text (texto sem os caps) para os pseudo-elementos do glitch
+  grifos.forEach((g) => { if (!g.getAttribute("data-text")) g.setAttribute("data-text", (g.textContent || "").trim()); });
+  const fireGlitch = (g) => {
+    g.classList.remove("is-glitch"); void g.offsetWidth; g.classList.add("is-glitch");
+  };
+  if ("IntersectionObserver" in window && grifos.length && !reduce) {
     const gio = new IntersectionObserver((entries, obs) => {
-      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("is-inview"); obs.unobserve(e.target); } });
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        fireGlitch(e.target);
+        // re-dispara ocasionalmente pra dar o feeling "bugado"
+        const iv = setInterval(() => {
+          if (Math.random() > 0.5 && document.visibilityState === "visible") fireGlitch(e.target);
+        }, 4200 + Math.random() * 2600);
+        e.target._glitchIv = iv;
+        obs.unobserve(e.target);
+      });
     }, { threshold: 0.6 });
     grifos.forEach((g) => gio.observe(g));
-  } else {
-    grifos.forEach((g) => g.classList.add("is-inview"));
   }
 
   /* ---------- Palavra rotativa no hero ---------- */
   const rotate = $("[data-rotate]");
   if (rotate) {
-    const words = ["tempo", "ritmo", "importância", "cuidado"];
+    const words = ["o sono", "a apneia", "o ronco", "o descanso"];
     let i = 0;
     setInterval(() => {
       i = (i + 1) % words.length;

@@ -17,7 +17,7 @@
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@1,9..144,300;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -109,53 +109,52 @@
 
     <!-- ============================= HERO ============================= -->
     <section class="hero">
-      <div class="hero__bg"></div>
-      <div class="hero__scrim"></div>
-      <div class="container hero__grid">
-        <div class="hero__content">
-          <span class="eyebrow hero__eyebrow hero__reveal" data-reveal>
-            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6" style="margin-right:-4px"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-            Pneumologia do Sono · Jaraguá do Sul
-          </span>
-          <h1 class="hero__title hero__reveal" data-reveal data-reveal-delay="1">
-            <span class="serif-italic">Seu sono</span> é a base da sua
-            <span class="grifo" data-grifo>energia e performance<i class="grifo-cap grifo-cap--l"></i><i class="grifo-cap grifo-cap--r"></i></span>.
-          </h1>
-          <p class="hero__lede hero__reveal" data-reveal data-reveal-delay="2">
-            Cada noite tem o seu <span class="hero-word" data-rotate>tempo</span>.<br>
-            Diagnóstico preciso e tratamento de ronco, apneia e cansaço — para quem decide <strong>viver com energia</strong>.
-          </p>
-          <div class="hero__cta hero__reveal" data-reveal data-reveal-delay="3">
-            <button class="btn btn-primary btn-lg" data-modal="agendarModal">Agendar polissonografia</button>
-            <a class="btn btn-outline-light btn-lg" href="quiz.html">
-              Fazer o quiz do sono
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__content">
+            <span class="eyebrow hero__reveal" data-reveal>
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6" style="margin-right:-4px"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Pneumologia do Sono · Jaraguá do Sul
+            </span>
+            <h1 class="hero__title hero__reveal" data-reveal data-reveal-delay="1">
+              Dormir bem<br>é decisão de quem<br><span class="grifo" data-grifo>não abre mão<i class="grifo-cap grifo-cap--l"></i><i class="grifo-cap grifo-cap--r"></i></span> da vida.
+            </h1>
           </div>
-          <p class="hero__filter hero__reveal" data-reveal data-reveal-delay="4">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l2.5 2.5L18 4l1 3.5L22 9l-1 3.5L22 16l-3.5 1L18 20l-3.5-.5L12 22l-2.5-2.5L6 20l-1-3.5L2 16l1-3.5L2 9l3.5-1L6 4l3.5.5L12 2Z"/><path d="m9 12 2 2 4-4"/></svg>
-            <span><strong>Atendimento particular.</strong> Aqui, o diagnóstico vem antes do tratamento.</span>
-          </p>
+          <div class="hero__visual hero__reveal" data-reveal data-reveal-delay="2">
+            <img class="hero__art" src="assets/hero-art.svg" alt="Ilustração de noite e ondas do sono" />
+            <div class="hero__tag">
+              <b>Referência em sono</b>
+              <span>Diretor Técnico · Interclínicas, Jaraguá do Sul</span>
+            </div>
+          </div>
         </div>
 
-        <aside class="hero__creds hero__reveal" data-reveal data-reveal-delay="2" aria-label="Credenciais">
-          <div class="hc-card">
-            <div class="hc-rating">
-              <span class="hc-rating-num">4,9</span>
-              <span class="hc-stars">★★★★★</span>
+        <div class="hero__grid" style="margin-top:38px;align-items:start">
+          <p class="hero__lede hero__reveal" data-reveal data-reveal-delay="2">
+            O cansaço que não passa raramente é falta de café — costuma ser
+            <span class="hero-word" data-rotate>o sono</span>.
+            Investigo a causa do seu ronco e da sua fadiga com exames precisos, para você recuperar noites e dias inteiros.
+          </p>
+          <div class="hero__reveal" data-reveal data-reveal-delay="3">
+            <div class="hero__cta">
+              <button class="btn btn-primary btn-lg" data-modal="agendarModal">Agendar polissonografia</button>
+              <a class="btn btn-ghost btn-lg" href="quiz.html">Fazer o quiz do sono
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
             </div>
-            <span class="hc-reviews">avaliação dos pacientes no Google</span>
-            <div class="hc-row"><span class="hc-label" style="font-size:.8rem;color:rgba(255,255,255,.6)">CRM-SC</span><span style="font-family:var(--font-display);font-weight:700">16.391 · 10.890</span></div>
+            <p class="hero__filter">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 6 9 17l-5-5"/></svg>
+              <span><strong>Atendimento particular.</strong> O diagnóstico vem antes de qualquer indicação.</span>
+            </p>
           </div>
-          <div class="hc-card hc-card--split">
-            <div class="hc-mini"><span class="hc-label">RQE</span><span class="hc-value">4650</span></div>
-            <div class="hc-mini"><span class="hc-label">Título</span><span class="hc-value">Pneumologia</span></div>
-          </div>
-          <div class="hc-card hc-card--split">
-            <div class="hc-mini"><span class="hc-label">Residência</span><span class="hc-value">HNSC · POA</span></div>
-            <div class="hc-mini"><span class="hc-label">Graduação</span><span class="hc-value">FURB</span></div>
-          </div>
-        </aside>
+        </div>
+
+        <div class="hero__creds hero__reveal" data-reveal data-reveal-delay="4" aria-label="Credenciais">
+          <div class="hc"><div class="hc-num">4,9<span class="hc-star">★</span></div><div class="hc-lbl">avaliação dos pacientes</div></div>
+          <div class="hc"><div class="hc-num">CRM 10.890</div><div class="hc-lbl">RQE 4650 · Pneumologia</div></div>
+          <div class="hc"><div class="hc-num">HNSC</div><div class="hc-lbl">Residência · Porto Alegre</div></div>
+          <div class="hc"><div class="hc-num">Interclínicas</div><div class="hc-lbl">Diretor Técnico · Jaraguá</div></div>
+        </div>
       </div>
     </section>
 
@@ -191,27 +190,33 @@
       <div class="container">
         <div class="quem__head" data-reveal>
           <span class="eyebrow">Quem chega até aqui</span>
-          <h2 class="section-title" style="margin-top:16px">Talvez você se reconheça em <span class="grifo" data-grifo>alguma dessas situações<i class="grifo-cap grifo-cap--l"></i><i class="grifo-cap grifo-cap--r"></i></span></h2>
+          <h2 class="section-title" style="margin-top:16px">Três histórias que talvez sejam <span class="grifo" data-grifo>a sua<i class="grifo-cap grifo-cap--l"></i><i class="grifo-cap grifo-cap--r"></i></span></h2>
         </div>
-        <div class="quem__grid">
-          <article class="quem-card" data-reveal data-reveal-delay="1">
-            <div class="quem-card__top"><span class="quem-num">01</span><span class="quem-sit">Situação I</span></div>
-            <h3>Você ronca e acorda cansado.</h3>
-            <p>Dorme a noite inteira, mas acorda sem energia. O ronco já incomoda quem dorme ao seu lado. Você sente que algo no seu sono não está certo.</p>
-            <button class="btn btn-ghost" data-modal="agendarModal">Investigar meu sono</button>
-          </article>
-          <article class="quem-card" data-reveal data-reveal-delay="2">
-            <div class="quem-card__top"><span class="quem-num">02</span><span class="quem-sit">Situação II</span></div>
-            <h3>Já tentou de tudo e nada resolveu.</h3>
-            <p>Mudou hábitos, testou travesseiros, tomou remédios — e o cansaço continua. Procura um diagnóstico de verdade, não mais um paliativo.</p>
-            <button class="btn btn-ghost" data-modal="agendarModal">Quero um diagnóstico</button>
-          </article>
-          <article class="quem-card" data-reveal data-reveal-delay="3">
-            <div class="quem-card__top"><span class="quem-num">03</span><span class="quem-sit">Situação III</span></div>
-            <h3>Você quer cuidar da saúde com método.</h3>
-            <p>Acredita em prevenção, performance e longevidade. Quer um especialista que integre sono, metabolismo e energia num plano só para você.</p>
-            <a class="btn btn-ghost" href="protocolo.html">Conhecer o Protocolo</a>
-          </article>
+        <div class="quem__list">
+          <div class="quem-row" data-reveal>
+            <span class="quem-num">01</span>
+            <h3>Você ronca — e acorda como se nem tivesse dormido.</h3>
+            <div>
+              <p>A noite inteira na cama, e mesmo assim o dia começa em modo economia de energia. Quem dorme ao seu lado já reclamou do ronco. Algo no seu sono não fecha.</p>
+              <button class="btn btn-ghost quem-cta" data-modal="agendarModal">Investigar meu sono</button>
+            </div>
+          </div>
+          <div class="quem-row" data-reveal>
+            <span class="quem-num">02</span>
+            <h3>Já testou de tudo, mas o cansaço não vai embora.</h3>
+            <div>
+              <p>Trocou o travesseiro, cortou a cafeína, tentou dormir mais cedo. Nada resolveu de verdade. Você quer um diagnóstico — não mais um paliativo.</p>
+              <button class="btn btn-ghost quem-cta" data-modal="agendarModal">Quero um diagnóstico</button>
+            </div>
+          </div>
+          <div class="quem-row" data-reveal>
+            <span class="quem-num">03</span>
+            <h3>Você trata saúde como projeto de longo prazo.</h3>
+            <div>
+              <p>Prevenção, energia e longevidade não são detalhe. Você procura alguém que conecte sono, metabolismo e performance num plano feito para o seu caso.</p>
+              <a class="btn btn-ghost quem-cta" href="protocolo.html">Conhecer o Protocolo</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -219,18 +224,35 @@
     <!-- ============================= SOBRE + STORY ============================= -->
     <section class="section" id="sobre" style="background:var(--paper-2)">
       <div class="container about__grid">
-        <div class="about__text" data-reveal>
+        <div class="story" data-reveal>
+          <div class="story__frame" data-story>
+            <img class="story__slide is-active" src="assets/portrait.svg" alt="Retrato editorial do Dr. Felipe Benthien" />
+            <div class="story__slide"><span class="story__slide-note">Foto do Dr. Felipe<br>no consultório</span></div>
+            <div class="story__slide"><span class="story__slide-note">Dr. em atendimento<br>/ polissonografia</span></div>
+            <div class="story__dots" aria-hidden="true"><span class="is-active"></span><span></span><span></span></div>
+            <div class="story__badge">
+              <span class="story__avatar">FB</span>
+              <span>
+                <span class="story__name">Dr. Felipe Benthien
+                  <span class="story__verified"><svg viewBox="0 0 16 16" width="15" height="15"><circle cx="8" cy="8" r="8" fill="currentColor"/><path d="M5 8.2l2 2 4-4.4" fill="none" stroke="#171012" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+                <span class="story__meta">CRM-SC 10.890 · Pneumologia</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about__text" data-reveal data-reveal-delay="1">
           <span class="eyebrow">Quem assina o atendimento</span>
-          <h2 class="section-title" style="margin-top:16px"><span class="serif-italic">Dr.</span> <span class="grifo" data-grifo>Felipe Benthien<i class="grifo-cap grifo-cap--l"></i><i class="grifo-cap grifo-cap--r"></i></span></h2>
+          <h2 class="section-title" style="margin-top:16px">O médico por trás de cada <span class="grifo" data-grifo>noite reparada<i class="grifo-cap grifo-cap--l"></i><i class="grifo-cap grifo-cap--r"></i></span></h2>
           <p>
-            Formado em Medicina pela FURB, com residência em Clínica Médica no Hospital
-            Santa Isabel (Blumenau) e especialização em Pneumologia no Hospital Nossa
-            Senhora da Conceição (Porto Alegre). Sócio-fundador e Diretor Técnico da Interclínicas.
+            Dr. Felipe Benthien é pneumologista formado pela FURB, com residência em Clínica
+            Médica (Hospital Santa Isabel, Blumenau) e especialização em Pneumologia no
+            Hospital Nossa Senhora da Conceição, em Porto Alegre. Hoje é Diretor Técnico da Interclínicas.
           </p>
           <p>
-            Sua missão vai além de tratar sintomas: é investigar a raiz do cansaço, do ronco
-            e da má qualidade de vida. Com uma abordagem que integra <strong>sono, metabolismo
-            e performance</strong>, ajuda cada paciente a recuperar noites reparadoras e dias com energia.
+            Ele não trata sintoma isolado. Investiga por que você dorme mal — e conecta
+            <strong>sono, metabolismo e movimento</strong> num plano que devolve energia real ao seu dia.
           </p>
           <div class="about__creds">
             <span class="chip">Polissonografia</span>
@@ -239,34 +261,13 @@
             <span class="chip">Insônia &amp; ronco</span>
           </div>
           <div class="about__sign">
-            <span class="dd-ico" style="width:48px;height:48px;border-radius:12px">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20s1-4 8-4 8 4 8 4"/><circle cx="12" cy="8" r="4"/></svg>
+            <span style="width:46px;height:46px;border:1px solid var(--line);color:var(--wine);display:grid;place-items:center">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20s1-4 8-4 8 4 8 4"/><circle cx="12" cy="8" r="4"/></svg>
             </span>
             <span>
               <span class="about__sign-name">Dr. Felipe Benthien</span><br>
               <span class="about__sign-role">Pneumologista · CRM-SC 10.890 · RQE 4650</span>
             </span>
-          </div>
-        </div>
-
-        <div class="story" data-reveal data-reveal-delay="1">
-          <div class="story__frame" data-story>
-            <div class="story__slide is-active"><span class="story__slide-note">Foto do Dr. Felipe<br>no consultório</span></div>
-            <div class="story__slide"><span class="story__slide-note">Dr. em atendimento<br>/ polissonografia</span></div>
-            <div class="story__slide"><span class="story__slide-note">Retrato profissional<br>do Dr. Felipe</span></div>
-            <div class="story__slide"><span class="story__slide-note">Ambiente da<br>Interclínicas</span></div>
-            <div class="story__dots" aria-hidden="true">
-              <span class="is-active"></span><span></span><span></span><span></span>
-            </div>
-            <div class="story__badge">
-              <span class="story__avatar">FB</span>
-              <span>
-                <span class="story__name">Dr. Felipe Benthien
-                  <span class="story__verified"><svg viewBox="0 0 16 16" width="15" height="15"><circle cx="8" cy="8" r="8" fill="currentColor"/><path d="M5 8.2l2 2 4-4.4" fill="none" stroke="#1a1114" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                </span>
-                <span class="story__meta">CRM-SC 10.890 · Pneumologia</span>
-              </span>
-            </div>
           </div>
         </div>
       </div>
@@ -343,7 +344,7 @@
               <div class="intent__panels" data-intent-panels>
                 <div class="intent-panel is-active" data-intent-panel="0">
                   <div class="intent-card">
-                    <div class="intent-card__media"><span>Imagem:<br>polissonografia</span></div>
+                    <div class="intent-card__media"><img src="assets/waves.svg" alt="Ondas do exame do sono" /></div>
                     <div class="intent-card__body">
                       <span class="intent-card__tag">Padrão-ouro</span>
                       <h3>Polissonografia</h3>
@@ -357,7 +358,7 @@
                 </div>
                 <div class="intent-panel" data-intent-panel="1">
                   <div class="intent-card">
-                    <div class="intent-card__media"><span>Imagem:<br>consulta do sono</span></div>
+                    <div class="intent-card__media"><img src="assets/portrait.svg" alt="Consulta pneumológica" /></div>
                     <div class="intent-card__body">
                       <span class="intent-card__tag">Investigação</span>
                       <h3>Consulta Pneumológica</h3>
@@ -370,7 +371,7 @@
                 </div>
                 <div class="intent-panel" data-intent-panel="2">
                   <div class="intent-card">
-                    <div class="intent-card__media"><span>Imagem:<br>titulação de CPAP</span></div>
+                    <div class="intent-card__media"><img src="assets/waves.svg" alt="Ajuste de CPAP" /></div>
                     <div class="intent-card__body">
                       <span class="intent-card__tag">Tratamento</span>
                       <h3>Titulação de CPAP</h3>
@@ -383,7 +384,7 @@
                 </div>
                 <div class="intent-panel" data-intent-panel="3">
                   <div class="intent-card">
-                    <div class="intent-card__media"><span>Imagem:<br>lifestyle / energia</span></div>
+                    <div class="intent-card__media"><img src="assets/hero-art.svg" alt="Transformação e energia" /></div>
                     <div class="intent-card__body">
                       <span class="intent-card__tag">Premium · 120 dias</span>
                       <h3>Protocolo Reset do Sono</h3>
@@ -509,7 +510,7 @@
               <div class="dif-a"><p>Diretor Técnico da Interclínicas e nome de confiança em medicina do sono na região.</p></div>
             </div>
           </div>
-          <div class="dif__figure" data-reveal data-reveal-delay="1"><span class="media-note">Foto do Dr. Felipe<br>/ consultório</span></div>
+          <div class="dif__figure" data-reveal data-reveal-delay="1"><img src="assets/portrait.svg" alt="Dr. Felipe Benthien" /></div>
         </div>
       </div>
     </section>
@@ -568,37 +569,19 @@
 
     <!-- ============================= DEPOIMENTOS (mural duplo) ============================= -->
     <section class="section testi" id="depoimentos">
-      <div class="container testi__head" data-reveal>
-        <span class="eyebrow eyebrow--center">Histórias reais</span>
-        <h2 class="section-title" style="margin-top:16px">Quem tratou o sono, <span class="grifo" data-grifo>mudou a vida<i class="grifo-cap grifo-cap--l"></i><i class="grifo-cap grifo-cap--r"></i></span></h2>
-        <p class="section-lead" style="margin-inline:auto;margin-top:14px"><span class="testi__stars">★★★★★</span> &nbsp;<strong>4,9</strong> · avaliações reais de pacientes</p>
-      </div>
-      <div class="testi__rows">
-        <div class="testi__row">
-          <div class="testi__track testi__track--a">
-            <article class="testi-card"><div class="review__stars">★★★★★</div><p class="testi-text">"Roncava há anos e vivia cansada. Depois da polissonografia e do tratamento, acordo com uma energia que eu não sentia há tempos."</p><div class="testi-foot"><span class="testi-photo">MR</span><span><span class="testi-name">Marina R.</span><br><span class="testi-role">Paciente · Jaraguá do Sul</span></span></div></article>
-            <article class="testi-card"><div class="review__stars">★★★★★</div><p class="testi-text">"Atendimento humano e explicação clara do início ao fim. Descobri que tinha apneia e hoje durmo com CPAP ajustado."</p><div class="testi-foot"><span class="testi-photo">JC</span><span><span class="testi-name">João Carlos</span><br><span class="testi-role">Paciente · Guaramirim</span></span></div></article>
-            <article class="testi-card"><div class="review__stars">★★★★★</div><p class="testi-text">"Entrei no Protocolo e além de dormir melhor, emagreci e recuperei disposição para treinar. Acompanhamento impecável."</p><div class="testi-foot"><span class="testi-photo">PS</span><span><span class="testi-name">Patrícia S.</span><br><span class="testi-role">Protocolo 120 dias</span></span></div></article>
-            <article class="testi-card"><div class="review__stars">★★★★★</div><p class="testi-text">"Médico atencioso e que explica tudo. Saí da consulta entendendo exatamente o que eu tinha e o que fazer."</p><div class="testi-foot"><span class="testi-photo">RF</span><span><span class="testi-name">Rafael F.</span><br><span class="testi-role">Paciente</span></span></div></article>
-            <!-- dup -->
-            <article class="testi-card"><div class="review__stars">★★★★★</div><p class="testi-text">"Roncava há anos e vivia cansada. Depois da polissonografia e do tratamento, acordo com uma energia que eu não sentia há tempos."</p><div class="testi-foot"><span class="testi-photo">MR</span><span><span class="testi-name">Marina R.</span><br><span class="testi-role">Paciente · Jaraguá do Sul</span></span></div></article>
-            <article class="testi-card"><div class="review__stars">★★★★★</div><p class="testi-text">"Atendimento humano e explicação clara do início ao fim. Descobri que tinha apneia e hoje durmo com CPAP ajustado."</p><div class="testi-foot"><span class="testi-photo">JC</span><span><span class="testi-name">João Carlos</span><br><span class="testi-role">Paciente · Guaramirim</span></span></div></article>
-            <article class="testi-card"><div class="review__stars">★★★★★</div><p class="testi-text">"Entrei no Protocolo e além de dormir melhor, emagreci e recuperei disposição para treinar. Acompanhamento impecável."</p><div class="testi-foot"><span class="testi-photo">PS</span><span><span class="testi-name">Patrícia S.</span><br><span class="testi-role">Protocolo 120 dias</span></span></div></article>
-            <article class="testi-card"><div class="review__stars">★★★★★</div><p class="testi-text">"Médico atencioso e que explica tudo. Saí da consulta entendendo exatamente o que eu tinha e o que fazer."</p><div class="testi-foot"><span class="testi-photo">RF</span><span><span class="testi-name">Rafael F.</span><br><span class="testi-role">Paciente</span></span></div></article>
-          </div>
+      <div class="container">
+        <div class="testi__head" data-reveal>
+          <span class="eyebrow">Histórias reais</span>
+          <h2 class="section-title" style="margin-top:16px">Trataram o sono e <span class="grifo" data-grifo>recuperaram o dia<i class="grifo-cap grifo-cap--l"></i><i class="grifo-cap grifo-cap--r"></i></span></h2>
+          <p class="section-lead" style="margin-top:14px"><span class="testi__stars">★★★★★</span> &nbsp;<strong>4,9</strong> · avaliações reais de pacientes</p>
         </div>
-        <div class="testi__row">
-          <div class="testi__track testi__track--b">
-            <article class="testi-card"><div class="review__stars">★★★★★</div><p class="testi-text">"Minha esposa não aguentava mais meu ronco. Fiz o exame, iniciei o tratamento e hoje a casa toda dorme melhor."</p><div class="testi-foot"><span class="testi-photo">LM</span><span><span class="testi-name">Luiz M.</span><br><span class="testi-role">Paciente</span></span></div></article>
-            <article class="testi-card"><div class="review__stars">★★★★★</div><p class="testi-text">"Profissional excelente e equipe atenciosa. Recomendo para quem sente cansaço sem explicação."</p><div class="testi-foot"><span class="testi-photo">AC</span><span><span class="testi-name">Ana C.</span><br><span class="testi-role">Paciente</span></span></div></article>
-            <article class="testi-card"><div class="review__stars">★★★★★</div><p class="testi-text">"O curso me fez entender meu sono e já mudou minhas noites. Depois marquei a consulta. Valeu cada minuto."</p><div class="testi-foot"><span class="testi-photo">DB</span><span><span class="testi-name">Diego B.</span><br><span class="testi-role">Curso Reset do Sono</span></span></div></article>
-            <article class="testi-card"><div class="review__stars">★★★★★</div><p class="testi-text">"Referência em Jaraguá. Sério, cuidadoso e didático. Finalmente um diagnóstico de verdade."</p><div class="testi-foot"><span class="testi-photo">ST</span><span><span class="testi-name">Sandra T.</span><br><span class="testi-role">Paciente</span></span></div></article>
-            <!-- dup -->
-            <article class="testi-card"><div class="review__stars">★★★★★</div><p class="testi-text">"Minha esposa não aguentava mais meu ronco. Fiz o exame, iniciei o tratamento e hoje a casa toda dorme melhor."</p><div class="testi-foot"><span class="testi-photo">LM</span><span><span class="testi-name">Luiz M.</span><br><span class="testi-role">Paciente</span></span></div></article>
-            <article class="testi-card"><div class="review__stars">★★★★★</div><p class="testi-text">"Profissional excelente e equipe atenciosa. Recomendo para quem sente cansaço sem explicação."</p><div class="testi-foot"><span class="testi-photo">AC</span><span><span class="testi-name">Ana C.</span><br><span class="testi-role">Paciente</span></span></div></article>
-            <article class="testi-card"><div class="review__stars">★★★★★</div><p class="testi-text">"O curso me fez entender meu sono e já mudou minhas noites. Depois marquei a consulta. Valeu cada minuto."</p><div class="testi-foot"><span class="testi-photo">DB</span><span><span class="testi-name">Diego B.</span><br><span class="testi-role">Curso Reset do Sono</span></span></div></article>
-            <article class="testi-card"><div class="review__stars">★★★★★</div><p class="testi-text">"Referência em Jaraguá. Sério, cuidadoso e didático. Finalmente um diagnóstico de verdade."</p><div class="testi-foot"><span class="testi-photo">ST</span><span><span class="testi-name">Sandra T.</span><br><span class="testi-role">Paciente</span></span></div></article>
-          </div>
+        <div class="testi__grid">
+          <article class="testi-card" data-reveal><div class="review__stars">★★★★★</div><p class="testi-text">"Roncava há anos e vivia exausta. Depois da polissonografia e do tratamento, acordo com uma energia que eu tinha esquecido que existia."</p><div class="testi-foot"><span class="testi-photo">MR</span><span><span class="testi-name">Marina R.</span><br><span class="testi-role">Paciente · Jaraguá do Sul</span></span></div></article>
+          <article class="testi-card" data-reveal data-reveal-delay="1"><div class="review__stars">★★★★★</div><p class="testi-text">"Ele explica cada passo. Descobri que tinha apneia, ajustei o CPAP e o meu dia a dia virou outro."</p><div class="testi-foot"><span class="testi-photo">JC</span><span><span class="testi-name">João Carlos</span><br><span class="testi-role">Paciente · Guaramirim</span></span></div></article>
+          <article class="testi-card" data-reveal data-reveal-delay="2"><div class="review__stars">★★★★★</div><p class="testi-text">"No Protocolo eu dormi melhor, emagreci e voltei a treinar. Cada etapa foi acompanhada de perto."</p><div class="testi-foot"><span class="testi-photo">PS</span><span><span class="testi-name">Patrícia S.</span><br><span class="testi-role">Protocolo 120 dias</span></span></div></article>
+          <article class="testi-card" data-reveal><div class="review__stars">★★★★★</div><p class="testi-text">"Minha esposa não aguentava mais o meu ronco. Fiz o exame, comecei o tratamento e hoje a casa toda dorme."</p><div class="testi-foot"><span class="testi-photo">LM</span><span><span class="testi-name">Luiz M.</span><br><span class="testi-role">Paciente</span></span></div></article>
+          <article class="testi-card" data-reveal data-reveal-delay="1"><div class="review__stars">★★★★★</div><p class="testi-text">"Fazia anos que eu sentia cansaço sem explicação. Foi o primeiro médico que investigou de verdade."</p><div class="testi-foot"><span class="testi-photo">AC</span><span><span class="testi-name">Ana C.</span><br><span class="testi-role">Paciente</span></span></div></article>
+          <article class="testi-card" data-reveal data-reveal-delay="2"><div class="review__stars">★★★★★</div><p class="testi-text">"Comecei pelo curso, entendi meu sono e depois marquei a consulta. Sério, cuidadoso e didático."</p><div class="testi-foot"><span class="testi-photo">DB</span><span><span class="testi-name">Diego B.</span><br><span class="testi-role">Curso Reset do Sono</span></span></div></article>
         </div>
       </div>
     </section>
@@ -657,6 +640,7 @@
 
     <!-- ============================= CTA FINAL ============================= -->
     <section class="cta-final">
+      <img class="cta-final__art" src="assets/hero-art.svg" alt="" aria-hidden="true" />
       <div class="container">
         <div class="cta-final__inner">
           <div data-reveal>
