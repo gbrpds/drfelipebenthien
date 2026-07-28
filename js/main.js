@@ -133,42 +133,19 @@
     }, 3200);
   }
 
-  /* ---------- Exames por intenção (sticky, scroll-driven) ---------- */
-  const track = $("[data-intent-track]");
-  if (track) {
+  /* ---------- Exames por intenção (tabs por clique/hover) ---------- */
+  const intentNav = $("[data-intent-nav]");
+  if (intentNav) {
     const tabs = $$("[data-intent-tab]");
     const panels = $$("[data-intent-panel]");
-    const bar = $("[data-intent-progress]");
-    const n = tabs.length;
-    // Altura do track = n telas (permite scroll para trocar painéis)
-    if (window.innerWidth > 860 && !reduce) track.style.height = (n * 100) + "vh";
-
     const setActive = (k) => {
       tabs.forEach((t, i) => t.classList.toggle("is-active", i === k));
       panels.forEach((p, i) => p.classList.toggle("is-active", i === k));
     };
-
-    const onIntentScroll = () => {
-      if (window.innerWidth <= 860) return;
-      const rect = track.getBoundingClientRect();
-      const total = track.offsetHeight - window.innerHeight;
-      const scrolled = Math.min(Math.max(-rect.top, 0), total);
-      const p = total > 0 ? scrolled / total : 0;
-      const k = Math.min(n - 1, Math.floor(p * n));
-      setActive(k);
-      if (bar) bar.style.width = (p * 100) + "%";
-    };
-    window.addEventListener("scroll", onIntentScroll, { passive: true });
-    if (lenis) lenis.on("scroll", onIntentScroll);
-    onIntentScroll();
-
-    // Clique nas tabs -> rola até a "fatia" correspondente (desktop) ou só troca (mobile)
-    tabs.forEach((t, i) => t.addEventListener("click", () => {
-      if (window.innerWidth <= 860) { setActive(i); return; }
-      const total = track.offsetHeight - window.innerHeight;
-      const y = track.offsetTop + (total * (i + 0.5) / n);
-      if (lenis) lenis.scrollTo(y); else window.scrollTo({ top: y, behavior: "smooth" });
-    }));
+    tabs.forEach((t, i) => {
+      t.addEventListener("click", () => setActive(i));
+      t.addEventListener("mouseenter", () => { if (window.innerWidth > 860) setActive(i); });
+    });
   }
 
   /* ---------- Chat objeções (reveal sequencial com typing) ---------- */

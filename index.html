@@ -10,10 +10,10 @@
     }
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Dr. Felipe Benthien | Pneumologia, Medicina do Sono e Performance — Jaraguá do Sul</title>
+  <title>Dr. Felipe Benthien | Pneumologia, Medicina do Sono e Performance, Jaraguá do Sul</title>
   <meta name="description" content="Dr. Felipe Benthien, pneumologista referência em Jaraguá do Sul. Diagnóstico e tratamento de ronco, apneia e distúrbios do sono. Polissonografia, titulação de CPAP e o Protocolo Reset do Sono." />
   <meta property="og:title" content="Dr. Felipe Benthien | Medicina do Sono e Performance" />
-  <meta property="og:description" content="Referência em Jaraguá do Sul no diagnóstico e tratamento dos distúrbios do sono. Volte a dormir — e a viver — com energia." />
+  <meta property="og:description" content="Referência em Jaraguá do Sul no diagnóstico e tratamento dos distúrbios do sono. Volte a dormir, e a viver, com energia." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,6 +21,14 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+
+  <!-- Brilhos flutuantes de fundo -->
+  <div class="bg-fx" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+    <span class="blob blob-4"></span>
+  </div>
 
   <!-- ============================= NAV ============================= -->
   <header class="nav" id="nav">
@@ -117,7 +125,7 @@
               Pneumologia do Sono · Jaraguá do Sul
             </span>
             <h1 class="hero__title hero__reveal" data-reveal data-reveal-delay="1">
-              Dormir bem<br>é decisão de quem<br><span class="grifo" data-grifo>não abre mão<i class="grifo-cap grifo-cap--l"></i><i class="grifo-cap grifo-cap--r"></i></span> da vida.
+              Dormir bem é decisão de quem <span class="grifo" data-grifo>não abre mão<i class="grifo-cap grifo-cap--l"></i><i class="grifo-cap grifo-cap--r"></i></span> da vida.
             </h1>
           </div>
           <div class="hero__visual hero__reveal" data-reveal data-reveal-delay="2">
@@ -131,7 +139,7 @@
 
         <div class="hero__grid" style="margin-top:38px;align-items:start">
           <p class="hero__lede hero__reveal" data-reveal data-reveal-delay="2">
-            O cansaço que não passa raramente é falta de café — costuma ser
+            O cansaço que não passa raramente é falta de café, costuma ser
             <span class="hero-word" data-rotate>o sono</span>.
             Investigo a causa do seu ronco e da sua fadiga com exames precisos, para você recuperar noites e dias inteiros.
           </p>
@@ -195,7 +203,7 @@
         <div class="quem__list">
           <div class="quem-row" data-reveal>
             <span class="quem-num">01</span>
-            <h3>Você ronca — e acorda como se nem tivesse dormido.</h3>
+            <h3>Você ronca, e acorda como se nem tivesse dormido.</h3>
             <div>
               <p>A noite inteira na cama, e mesmo assim o dia começa em modo economia de energia. Quem dorme ao seu lado já reclamou do ronco. Algo no seu sono não fecha.</p>
               <button class="btn btn-ghost quem-cta" data-modal="agendarModal">Investigar meu sono</button>
@@ -205,7 +213,7 @@
             <span class="quem-num">02</span>
             <h3>Já testou de tudo, mas o cansaço não vai embora.</h3>
             <div>
-              <p>Trocou o travesseiro, cortou a cafeína, tentou dormir mais cedo. Nada resolveu de verdade. Você quer um diagnóstico — não mais um paliativo.</p>
+              <p>Trocou o travesseiro, cortou a cafeína, tentou dormir mais cedo. Nada resolveu de verdade. Você quer um diagnóstico, não mais um paliativo.</p>
               <button class="btn btn-ghost quem-cta" data-modal="agendarModal">Quero um diagnóstico</button>
             </div>
           </div>
@@ -251,7 +259,7 @@
             Hospital Nossa Senhora da Conceição, em Porto Alegre. Hoje é Diretor Técnico da Interclínicas.
           </p>
           <p>
-            Ele não trata sintoma isolado. Investiga por que você dorme mal — e conecta
+            Ele não trata sintoma isolado. Investiga por que você dorme mal, e conecta
             <strong>sono, metabolismo e movimento</strong> num plano que devolve energia real ao seu dia.
           </p>
           <div class="about__creds">
@@ -306,17 +314,16 @@
       </div>
     </section>
 
-    <!-- ============================= EXAMES POR INTENÇÃO (sticky) ============================= -->
-    <section class="intent" id="exames">
-      <div class="intent__track" data-intent-track>
-        <div class="intent__sticky">
-          <div class="container">
-            <div class="intent__head" data-reveal>
-              <span class="eyebrow">Exames &amp; Consultas</span>
-              <h2 class="section-title" style="margin-top:16px">Encontre pelo que <span class="grifo" data-grifo>faz sentido pra você<i class="grifo-cap grifo-cap--l"></i><i class="grifo-cap grifo-cap--r"></i></span></h2>
-            </div>
+    <!-- ============================= EXAMES POR INTENÇÃO ============================= -->
+    <section class="section intent" id="exames">
+      <div class="container">
+        <div class="intent__head" data-reveal>
+          <span class="eyebrow">Exames &amp; Consultas</span>
+          <h2 class="section-title" style="margin-top:16px">Escolha o caminho que <span class="grifo" data-grifo>faz sentido pra você<i class="grifo-cap grifo-cap--l"></i><i class="grifo-cap grifo-cap--r"></i></span></h2>
+          <p class="section-lead" style="margin-top:16px">Cada opção leva a um plano conduzido de perto pelo Dr. Felipe. Toque na que mais parece com o seu momento e veja o exame indicado.</p>
+        </div>
 
-            <div class="intent__stage">
+        <div class="intent__wrap">
               <div class="intent__nav" data-intent-nav>
                 <button class="intent-tab is-active" data-intent-tab="0">
                   <span class="intent-tab__bar"></span>
@@ -396,8 +403,6 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -438,7 +443,7 @@
           <a class="eco-card eco-card--protocolo eco-card--wide" href="protocolo.html" data-reveal>
             <span class="eco-card__badge">Premium · 6 meses</span>
             <div class="eco-card__body">
-              <h3>Protocolo Reset do Sono — 120 Dias</h3>
+              <h3>Protocolo Reset do Sono, 120 Dias</h3>
               <p>O programa mais completo: exame, tratamento do sono, emagrecimento médico, personal trainer e acompanhamento por 6 meses.</p>
               <span class="link-arrow">Conhecer o Protocolo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
             </div>
@@ -483,7 +488,7 @@
                 Tempo de verdade para investigar
                 <span class="dif-mark"></span>
               </button>
-              <div class="dif-a"><p>Consulta sem pressa, para entender a raiz do seu cansaço — não apenas silenciar o sintoma.</p></div>
+              <div class="dif-a"><p>Consulta sem pressa, para entender a raiz do seu cansaço, não apenas silenciar o sintoma.</p></div>
             </div>
             <div class="dif-item">
               <button class="dif-q">
@@ -499,7 +504,7 @@
                 Sono, metabolismo e movimento juntos
                 <span class="dif-mark"></span>
               </button>
-              <div class="dif-a"><p>Uma abordagem integrada que trata o sono, o peso e a energia — porque tudo está conectado.</p></div>
+              <div class="dif-a"><p>Uma abordagem integrada que trata o sono, o peso e a energia, porque tudo está conectado.</p></div>
             </div>
             <div class="dif-item">
               <button class="dif-q">
@@ -538,7 +543,7 @@
             <span class="msg-avatar">FB</span>
             <div class="msg-col"><span class="msg-nome">Dr. Felipe</span>
               <div class="msg-typing"><span></span><span></span><span></span></div>
-              <div class="msg-bubble msg-bubble-dra">Esse receio é comum. O exame existe justamente para tirar a dúvida com precisão. Se estiver tudo bem, você ganha tranquilidade. Se houver apneia, a gente trata cedo — e isso muda tudo.</div>
+              <div class="msg-bubble msg-bubble-dra">Esse receio é comum. O exame existe justamente para tirar a dúvida com precisão. Se estiver tudo bem, você ganha tranquilidade. Se houver apneia, a gente trata cedo, e isso muda tudo.</div>
             </div>
           </div>
           <div class="msg msg-paciente" data-msg><div class="msg-bubble">Quanto custa? Queria entender antes de agendar.</div></div>
@@ -596,7 +601,7 @@
             <span class="msg-avatar">FB</span>
             <span><span class="c-name">Dr. Felipe Benthien</span><br><span class="c-role">Pneumologista · Medicina do Sono</span></span>
           </div>
-          <p>Não encontrou sua resposta? Fale com nossa equipe pelo WhatsApp — respondemos rápido.</p>
+          <p>Não encontrou sua resposta? Fale com nossa equipe pelo WhatsApp, respondemos rápido.</p>
           <button class="btn btn-light" data-modal="agendarModal">Falar no WhatsApp</button>
         </div>
         <div class="faq__list" data-reveal data-reveal-delay="1">
@@ -604,7 +609,7 @@
           <div class="faq-item"><button class="faq-item__q">Preciso de encaminhamento para agendar? <span class="plus"></span></button><div class="faq-item__a"><p>Não. Você pode agendar diretamente sua consulta ou exame pelo WhatsApp. O atendimento é particular e nossa equipe orienta você em cada etapa.</p></div></div>
           <div class="faq-item"><button class="faq-item__q">Qual a diferença entre o curso e o protocolo? <span class="plus"></span></button><div class="faq-item__a"><p>O Curso Reset do Sono é digital e prático, ideal para começar por conta própria. O Protocolo 120 Dias é um acompanhamento premium e presencial, com exames, tratamento, emagrecimento médico e personal trainer.</p></div></div>
           <div class="faq-item"><button class="faq-item__q">O quiz do sono substitui uma consulta? <span class="plus"></span></button><div class="faq-item__a"><p>Não. O quiz é uma triagem que indica seu nível de risco e orienta o próximo passo. O diagnóstico definitivo é sempre feito por avaliação médica e exame.</p></div></div>
-          <div class="faq-item"><button class="faq-item__q">Onde fica o atendimento? <span class="plus"></span></button><div class="faq-item__a"><p>Na Interclínicas — Rua Amazonas, 75, Centro, Jaraguá do Sul/SC. Veja o mapa e os contatos na seção de contato.</p></div></div>
+          <div class="faq-item"><button class="faq-item__q">Onde fica o atendimento? <span class="plus"></span></button><div class="faq-item__a"><p>Na Interclínicas, Rua Amazonas, 75, Centro, Jaraguá do Sul/SC. Veja o mapa e os contatos na seção de contato.</p></div></div>
         </div>
       </div>
     </section>
@@ -623,7 +628,7 @@
             </a>
             <div class="contact-line">
               <span class="cl-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
-              <span><span class="cl-label">Endereço · Interclínicas</span><br><span class="cl-value">Rua Amazonas, 75 — Centro, Jaraguá do Sul/SC</span></span>
+              <span><span class="cl-label">Endereço · Interclínicas</span><br><span class="cl-value">Rua Amazonas, 75, Centro, Jaraguá do Sul/SC</span></span>
             </div>
             <div class="contact-line">
               <span class="cl-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>
@@ -633,7 +638,7 @@
           <button class="btn btn-primary btn-lg" data-modal="agendarModal">Agendar agora pelo WhatsApp</button>
         </div>
         <div class="contact__map" data-reveal data-reveal-delay="1">
-          <span class="media-note">Mapa / Google Maps<br>Rua Amazonas, 75 — Centro<br>Jaraguá do Sul/SC</span>
+          <span class="media-note">Mapa / Google Maps<br>Rua Amazonas, 75, Centro<br>Jaraguá do Sul/SC</span>
         </div>
       </div>
     </section>
@@ -680,7 +685,7 @@
         <div class="footer__col"><h4>Programas</h4><a href="protocolo.html">Protocolo 120 Dias</a><a href="curso.html">Curso Reset do Sono</a><a href="comunidade.html">Comunidade</a><a href="quiz.html">Quiz do Sono</a></div>
         <div class="footer__col"><h4>Institucional</h4><a href="#sobre">Sobre o Dr. Felipe</a><a href="#depoimentos">Depoimentos</a><a href="#faq">Dúvidas</a><a href="#contato">Contato</a></div>
       </div>
-      <p class="footer__disclaimer">Dr. Felipe Benthien · CRM-SC 10.890 · RQE 4650 — Pneumologia. As informações deste site têm caráter educativo e não substituem a consulta médica. O diagnóstico e o tratamento de distúrbios do sono devem ser realizados por avaliação profissional individualizada.</p>
+      <p class="footer__disclaimer">Dr. Felipe Benthien · CRM-SC 10.890 · RQE 4650, Pneumologia. As informações deste site têm caráter educativo e não substituem a consulta médica. O diagnóstico e o tratamento de distúrbios do sono devem ser realizados por avaliação profissional individualizada.</p>
       <div class="footer__bar">
         <span>© <span id="year">2026</span> Dr. Felipe Benthien. Todos os direitos reservados.</span>
         <span>Jaraguá do Sul · Santa Catarina · Brasil</span>
