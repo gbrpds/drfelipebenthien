@@ -121,16 +121,29 @@
   const firstDif = $(".dif-item.is-open .dif-a");
   if (firstDif) firstDif.style.maxHeight = firstDif.scrollHeight + "px";
 
-  /* ---------- Story slideshow ---------- */
-  const story = $("[data-story]");
-  if (story) {
-    const slides = $$(".story__slide", story), dots = $$(".story__dots span", story);
-    let idx = 0;
-    setInterval(() => {
-      slides[idx].classList.remove("is-active"); if (dots[idx]) dots[idx].classList.remove("is-active");
-      idx = (idx + 1) % slides.length;
-      slides[idx].classList.add("is-active"); if (dots[idx]) dots[idx].classList.add("is-active");
-    }, 3200);
+  /* ---------- Reels: playlist de vídeos em loop (um termina, o próximo começa) ---------- */
+  const reels = $("[data-reels]");
+  if (reels) {
+    const video = $("[data-reels-video]", reels);
+    const dots = $$("[data-reels-dots] span", reels);
+    const base = "assets/videos/";
+    const list = ["1-1.mp4", "2-1.mp4", "3-1.mp4", "4-1.mp4", "5-1.mp4", "6-1.mp4"];
+    let idx = 0, fails = 0;
+    const setDots = () => dots.forEach((d, k) => d.classList.toggle("is-active", k === idx % dots.length));
+    const load = (k) => {
+      idx = (k + list.length) % list.length;
+      video.src = base + list[idx];
+      video.muted = true; // necessário p/ autoplay
+      video.load();
+      const pr = video.play();
+      if (pr && pr.catch) pr.catch(() => {});
+      setDots();
+    };
+    video.addEventListener("playing", () => { fails = 0; });
+    video.addEventListener("ended", () => { fails = 0; load(idx + 1); });
+    // Se um vídeo falhar, pula p/ o próximo — mas para se todos falharem (evita loop infinito)
+    video.addEventListener("error", () => { if (++fails <= list.length) load(idx + 1); });
+    load(0);
   }
 
   /* ---------- Exames por intenção (scroll-driven: pin + alterna 01→04) ---------- */

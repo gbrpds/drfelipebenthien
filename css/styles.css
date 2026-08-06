@@ -148,7 +148,12 @@ body.menu-open .nav__drawer{transform:translateX(0)}
 .pblur-bottom{bottom:0;height:120px;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);mask-image:linear-gradient(to top,#000 0%,#000 40%,transparent 100%);-webkit-mask-image:linear-gradient(to top,#000 0%,#000 40%,transparent 100%)}
 
 /* ============================================================ HERO (assimétrico) */
-.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-start;padding-top:clamp(128px,14vw,172px);padding-bottom:clamp(40px,5vw,72px);position:relative;overflow:hidden}
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-start;padding-top:clamp(128px,14vw,172px);padding-bottom:clamp(40px,5vw,72px);position:relative;overflow:hidden;isolation:isolate}
+/* Vídeo de fundo do hero */
+.hero__bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;background:var(--paper)}
+.hero__bg-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(105deg,rgba(247,243,240,.95) 0%,rgba(247,243,240,.88) 36%,rgba(247,243,240,.55) 62%,rgba(247,243,240,.3) 100%)}
+.hero__bg-scrim::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(247,243,240,.6) 0%,transparent 22%,transparent 78%,rgba(247,243,240,.55) 100%)}
+.hero>.container{position:relative;z-index:2}
 .hero__grid{display:grid;grid-template-columns:1.5fr .78fr;gap:clamp(30px,4.5vw,64px);align-items:end}
 .hero__content{max-width:none}
 .hero__title{font-size:clamp(2.2rem,4.9vw,3.9rem);letter-spacing:-.025em;margin-top:20px;line-height:1.02;font-weight:800;color:var(--ink)}
@@ -216,6 +221,23 @@ body.menu-open .nav__drawer{transform:translateX(0)}
 .story__dots{position:absolute;top:18px;left:18px;right:18px;display:flex;gap:5px}
 .story__dots span{flex:1;height:2px;background:rgba(255,255,255,.3)}
 .story__dots span.is-active{background:rgba(255,255,255,.9)}
+
+/* ---------- Reels (box de vídeos estilo Instagram) ---------- */
+.reels{position:relative;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/5;box-shadow:var(--shadow-lg);background:#1a1114}
+.reels__video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.reels__shade{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to top,rgba(12,7,9,.82) 0%,rgba(12,7,9,.28) 30%,transparent 52%),linear-gradient(to bottom,rgba(12,7,9,.4) 0%,transparent 20%)}
+.reels__dots{position:absolute;top:14px;left:14px;right:14px;z-index:3;display:flex;gap:5px}
+.reels__dots span{flex:1;height:3px;border-radius:3px;background:rgba(255,255,255,.34);transition:background .3s}
+.reels__dots span.is-active{background:rgba(255,255,255,.96)}
+.reels__rail{position:absolute;right:16px;bottom:120px;z-index:3;display:flex;flex-direction:column;align-items:center;gap:20px}
+.reels__act{display:flex;flex-direction:column;align-items:center;gap:5px;color:#fff}
+.reels__act svg{width:30px;height:30px;filter:drop-shadow(0 2px 6px rgba(0,0,0,.5))}
+.reels__act b{font-family:var(--font-ui);font-weight:600;font-size:.72rem;text-shadow:0 1px 4px rgba(0,0,0,.55)}
+.reels__foot{position:absolute;left:16px;right:74px;bottom:16px;z-index:3;display:flex;flex-direction:column;gap:12px}
+.reels .story__badge{position:static;left:auto;bottom:auto;align-self:flex-start}
+.reels__follow{display:inline-flex;align-items:flex-start;gap:9px;color:#fff;font-family:var(--font-ui);font-weight:500;font-size:.85rem;line-height:1.4;max-width:32ch;text-shadow:0 1px 6px rgba(0,0,0,.6);transition:color .25s}
+.reels__follow svg{flex:none;margin-top:1px}
+.reels__follow:hover{color:var(--wine-soft)}
 
 /* ============================================================ JORNADA (linha do tempo horizontal deslocada) */
 .jornada{background:var(--ink);color:rgba(255,255,255,.75)}

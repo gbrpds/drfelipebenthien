@@ -117,6 +117,10 @@
 
     <!-- ============================= HERO ============================= -->
     <section class="hero">
+      <video class="hero__bg" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+        <source src="assets/videos/Fundo.mp4" type="video/mp4" />
+      </video>
+      <span class="hero__bg-scrim" aria-hidden="true"></span>
       <div class="container">
         <div class="hero__grid">
           <div class="hero__content">
@@ -227,19 +231,45 @@
     <section class="section" id="sobre" style="background:var(--paper-2)">
       <div class="container about__grid">
         <div class="story" data-reveal>
-          <div class="story__frame" data-story>
-            <img class="story__slide is-active" src="assets/portrait.svg" alt="Retrato editorial do Dr. Felipe Benthien" />
-            <div class="story__slide"><span class="story__slide-note">Foto do Dr. Felipe<br>no consultório</span></div>
-            <div class="story__slide"><span class="story__slide-note">Dr. em atendimento<br>/ polissonografia</span></div>
-            <div class="story__dots" aria-hidden="true"><span class="is-active"></span><span></span><span></span></div>
-            <div class="story__badge">
-              <span class="story__avatar">FB</span>
-              <span>
-                <span class="story__name">Dr. Felipe Benthien
-                  <span class="story__verified"><svg viewBox="0 0 16 16" width="15" height="15"><circle cx="8" cy="8" r="8" fill="currentColor"/><path d="M5 8.2l2 2 4-4.4" fill="none" stroke="#171012" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                </span>
-                <span class="story__meta">CRM-SC 10.890 · Pneumologia</span>
+          <div class="reels" data-reels>
+            <video class="reels__video" data-reels-video muted playsinline autoplay preload="auto" aria-label="Conteúdos do Dr. Felipe Benthien sobre sono e saúde"></video>
+            <span class="reels__shade" aria-hidden="true"></span>
+
+            <div class="reels__dots" data-reels-dots aria-hidden="true">
+              <span class="is-active"></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+
+            <!-- Barra de ações estilo reels -->
+            <div class="reels__rail" aria-hidden="true">
+              <span class="reels__act">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.3 2 5 5.2 5c2 0 3.3 1.1 4.1 2.3.7 1 .7 1 .7 1s0 0 .7-1C11.5 6.1 12.8 5 14.8 5 18 5 19.6 8.3 22 11.7 19.5 16.4 12 21 12 21Z"/></svg>
+                <b>1,2 mil</b>
               </span>
+              <span class="reels__act">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1-5.5a8.5 8.5 0 0 1-1-4A8.4 8.4 0 0 1 11.5 3 8.5 8.5 0 0 1 21 11.5Z"/></svg>
+                <b>184</b>
+              </span>
+              <span class="reels__act">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7Z"/></svg>
+                <b>Enviar</b>
+              </span>
+            </div>
+
+            <!-- Rodapé: assinatura + chamada p/ Instagram -->
+            <div class="reels__foot">
+              <div class="story__badge">
+                <span class="story__avatar">FB</span>
+                <span>
+                  <span class="story__name">Dr. Felipe Benthien
+                    <span class="story__verified"><svg viewBox="0 0 16 16" width="15" height="15"><circle cx="8" cy="8" r="8" fill="currentColor"/><path d="M5 8.2l2 2 4-4.4" fill="none" stroke="#171012" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                  </span>
+                  <span class="story__meta">CRM-SC 10.890 · Pneumologia</span>
+                </span>
+              </div>
+              <a class="reels__follow" href="https://instagram.com/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                <span>Me siga no Instagram e acompanhe conteúdos sobre sono e saúde.</span>
+              </a>
             </div>
           </div>
         </div>
