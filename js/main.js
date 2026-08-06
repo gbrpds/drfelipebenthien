@@ -133,19 +133,51 @@
     }, 3200);
   }
 
-  /* ---------- Exames por intenção (tabs por clique/hover) ---------- */
+  /* ---------- Exames por intenção (scroll-driven: pin + alterna 01→04) ---------- */
   const intentNav = $("[data-intent-nav]");
+  const intentPin = $("[data-intent-pin]");
   if (intentNav) {
     const tabs = $$("[data-intent-tab]");
     const panels = $$("[data-intent-panel]");
+    let activeK = -1;
     const setActive = (k) => {
+      k = Math.max(0, Math.min(tabs.length - 1, k));
+      if (k === activeK) return;
+      activeK = k;
       tabs.forEach((t, i) => t.classList.toggle("is-active", i === k));
       panels.forEach((p, i) => p.classList.toggle("is-active", i === k));
     };
+    // Só faz "scroll-jacking" no desktop e sem reduced-motion
+    const intentSec = intentPin ? intentPin.closest(".intent") : null;
+    const pinMode = () => intentPin && window.innerWidth > 860 && !reduce;
+    const syncPinClass = () => { if (intentSec) intentSec.classList.toggle("is-pinned", !!pinMode()); };
+    const updateFromScroll = () => {
+      if (!pinMode()) return;
+      const total = intentPin.offsetHeight - window.innerHeight;
+      if (total <= 0) return;
+      const scrolled = Math.min(Math.max(-intentPin.getBoundingClientRect().top, 0), total);
+      const p = scrolled / total; // 0 → 1 ao longo da seção fixada
+      setActive(Math.floor(p * tabs.length * 0.999));
+    };
     tabs.forEach((t, i) => {
-      t.addEventListener("click", () => setActive(i));
-      t.addEventListener("mouseenter", () => { if (window.innerWidth > 860) setActive(i); });
+      t.addEventListener("click", () => {
+        if (pinMode()) {
+          const total = intentPin.offsetHeight - window.innerHeight;
+          const pinTopAbs = intentPin.getBoundingClientRect().top + window.scrollY;
+          const y = pinTopAbs + ((i + 0.5) / tabs.length) * total;
+          if (lenis) lenis.scrollTo(y); else window.scrollTo({ top: y, behavior: "smooth" });
+        } else {
+          setActive(i);
+        }
+      });
+      t.addEventListener("mouseenter", () => { if (!pinMode() && window.innerWidth > 860) setActive(i); });
     });
+    window.addEventListener("scroll", updateFromScroll, { passive: true });
+    if (lenis) lenis.on("scroll", updateFromScroll);
+    window.addEventListener("resize", () => { syncPinClass(); updateFromScroll(); });
+    syncPinClass();
+    setActive(0);
+    updateFromScroll();
   }
 
   /* ---------- Chat objeções (reveal sequencial com typing) ---------- */
