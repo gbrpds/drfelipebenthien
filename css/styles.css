@@ -291,12 +291,12 @@ body.menu-open .nav__drawer{transform:translateX(0)}
 
 /* ============================================================ ECOSSISTEMA (mosaico assimétrico) */
 .eco__head{max-width:36ch;margin-bottom:52px}
-.eco__grid{display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(4,minmax(180px,1fr));gap:14px;
+.eco__grid{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:minmax(286px,auto);gap:14px;
   grid-template-areas:
-    "proto proto proto proto curso curso"
-    "proto proto proto proto curso curso"
-    "proto proto proto proto comun comun"
-    "quiz  quiz  quiz  quiz  comun comun"}
+    "proto proto curso"
+    "proto proto reset"
+    "quiz  comun blog"}
+.eco-card{padding-top:56px}
 .eco-card{position:relative;overflow:hidden;padding:34px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;transition:transform .5s var(--ease);isolation:isolate;border-radius:var(--r-lg)}
 .eco-card::before{content:"";position:absolute;inset:0;z-index:-2;transition:transform .8s var(--ease)}
 .eco-card::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(23,15,18,.08) 0%,rgba(23,15,18,.9) 100%)}
@@ -304,13 +304,17 @@ body.menu-open .nav__drawer{transform:translateX(0)}
 .eco-card:hover::before{transform:scale(1.06)}
 .eco-card--protocolo::before{background:linear-gradient(150deg,#6c0c1f,#2a0810)}
 .eco-card--curso::before{background:linear-gradient(150deg,#8a1027,#4c0715)}
-.eco-card--comunidade::before{background:linear-gradient(150deg,#3a2d30,#170f12)}
-.eco-card--quiz::before{background:linear-gradient(150deg,#a02236,#611018)}
+.eco-card--reset::before{background:linear-gradient(150deg,#a02236,#611018)}
+.eco-card--quiz::before{background:linear-gradient(150deg,#3a2d30,#170f12)}
+.eco-card--comunidade::before{background:linear-gradient(150deg,#4c0715,#241016)}
+.eco-card--blog::before{background:linear-gradient(150deg,#2a1d21,#6c0c1f)}
 /* posicionamento assimétrico (grid areas) */
 .eco-card--protocolo{grid-area:proto}
 .eco-card--curso{grid-area:curso}
-.eco-card--comunidade{grid-area:comun}
+.eco-card--reset{grid-area:reset}
 .eco-card--quiz{grid-area:quiz}
+.eco-card--comunidade{grid-area:comun}
+.eco-card--blog{grid-area:blog}
 .eco-card__badge{position:absolute;top:24px;left:24px;z-index:1;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;font-family:var(--font-ui);background:rgba(255,255,255,.14);backdrop-filter:blur(6px);padding:7px 14px;border-radius:var(--r-sm)}
 .eco-card__price{position:absolute;top:22px;right:24px;z-index:1;font-family:var(--font-head);font-weight:700;font-size:1.1rem}
 .eco-card h3{color:#fff;font-size:clamp(1.5rem,2.6vw,2.3rem);margin-bottom:12px}
@@ -566,7 +570,8 @@ body.menu-open .nav__drawer{transform:translateX(0)}
   .intent__wrap{grid-template-columns:1fr}
   .intent__nav{order:0}
   .eco__grid{grid-template-columns:1fr 1fr;grid-template-rows:none;grid-template-areas:none}
-  .eco-card--protocolo,.eco-card--curso,.eco-card--comunidade,.eco-card--quiz{grid-area:auto;grid-column:span 1;grid-row:auto;min-height:230px}
+  .eco-card{grid-area:auto!important;grid-column:span 1;grid-row:auto;min-height:230px}
+  .eco-card--protocolo{grid-column:span 2}
 }
 @media (max-width:860px){
   .nav__menu,.nav__actions .btn{display:none}
